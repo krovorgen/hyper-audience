@@ -6,13 +6,14 @@ type Props = {};
 
 export const Blockquote: FC<Props> = () => {
   return (
-    <div className={styles.root}>
+    <section className={styles.root}>
       <div className="container">
         <p className={styles.text}>
-          Делаем так, чтобы <mark>вас заметили</mark>. Добиваемся перевыполнения плана — <mark>нас рекомендуют</mark>{' '}
-          крупные бренды, такие как <mark>Tess и Нурофен</mark>
+          Hyper Audience unites publishers with premium inventory and the best buyers&nbsp;&mdash; DSP and direct
+          Advertising Agencies. Own DSP and Smart bidder allow you to&nbsp;effectively buy inventory with precise
+          audience targeting
         </p>
       </div>
-    </div>
+    </section>
   );
 };

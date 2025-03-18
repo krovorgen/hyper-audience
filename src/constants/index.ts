@@ -1,8 +1,15 @@
 export enum RoutePaths {
   HOME = '/',
-  FORMAT = '/format',
-  SOLUTIONS = '/solutions',
-  INVENTORY_DATA = '/inventory-data',
-  ABOUT = '/about',
-  POLICY = '/policy',
+  POLICY = '/privacy_policy',
+  POLICY_OUTPUT = '/opt_out_policy',
+  TERMS = '/terms_and_conditions',
 }
+
+export const MENU_ANCHOR = [
+  { path: '/#platform', label: 'Platform' },
+  { path: '/#solutions', label: 'Solutions' },
+  { path: '/#buyers', label: 'For Buyers' },
+  { path: '/#sellers', label: 'For Sellers' },
+  { path: '/#partners', label: 'Partners' },
+  { path: '/#contact', label: 'Contact Us' },
+];

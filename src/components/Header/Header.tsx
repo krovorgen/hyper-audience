@@ -1,11 +1,12 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { JSX, useEffect, useState } from 'react';
 import cn from 'classnames';
-import { RoutePaths } from '../../constants';
+import { MENU_ANCHOR, RoutePaths } from '../../constants';
 import logo from '../../assets/images/logo.svg';
 import Burger from '../../assets/icons/burger.svg?react';
 import Close from '../../assets/icons/close.svg?react';
 import styles from './Header.module.scss';
+import { Button } from '../Button/Button.tsx';
 
 export const Header = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,34 +30,26 @@ export const Header = (): JSX.Element => {
     <header className={styles.header}>
       <div className={cn('container', styles.container)}>
         <Link to={RoutePaths.HOME} className={styles.logo}>
-          <img src={logo} width={82} height={33} alt="Логотип" />
+          <img src={logo} width={117} height={33} alt="Логотип" />
         </Link>
 
         <button className={styles.burger} onClick={toggleMenu}>
           {isOpen ? <Close /> : <Burger />}
         </button>
-
         <nav className={cn(styles.nav, { [styles.navOpen]: isOpen })}>
           <ul className={styles.items}>
-            {[
-              { path: RoutePaths.HOME, label: 'Главная' },
-              { path: RoutePaths.FORMAT, label: 'Форматы' },
-              { path: RoutePaths.SOLUTIONS, label: 'Решения' },
-              { path: RoutePaths.INVENTORY_DATA, label: 'Инвентарь и данные' },
-              { path: RoutePaths.ABOUT, label: 'О компании' },
-            ].map(({ path, label }) => (
+            {MENU_ANCHOR.map(({ path, label }) => (
               <li key={path} className={styles.item}>
-                <NavLink
-                  to={path}
-                  className={({ isActive }) => (isActive ? `${styles.link} ${styles.linkActive}` : styles.link)}
-                  onClick={closeMenu} // Закрываем меню после клика
-                >
+                <Link to={path} className={styles.link} onClick={closeMenu}>
                   {label}
-                </NavLink>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
+        <Button className={styles.contact} Component="a" href="/#contact" size="sm">
+          Contact Us
+        </Button>
       </div>
     </header>
   );

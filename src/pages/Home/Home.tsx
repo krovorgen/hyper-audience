@@ -1,21 +1,19 @@
 import { Hero } from './Hero/Hero.tsx';
+import { Contact } from './Contact/Contact.tsx';
 import { Blockquote } from './Blockquote/Blockquote.tsx';
-import { Industries } from './Industries/Industries.tsx';
-import { Trust } from './Trust/Trust.tsx';
-import { Results } from './Results/Results.tsx';
+import { ClientsTypes } from './ClientsTypes/ClientsTypes.tsx';
 import { Partners } from './Partners/Partners.tsx';
-import { Contact } from '../../components/Contact/Contact.tsx';
-import { AdvertisingFormat } from '../../components/AdvertisingFormat/AdvertisingFormat.tsx';
+import { Solutions } from './Solutions/Solutions.tsx';
+import { Advanced } from './Advanced/Advanced.tsx';
 
 export const Home = () => {
   return (
     <>
       <Hero />
-      <AdvertisingFormat />
+      <Advanced />
+      <Solutions />
       <Blockquote />
-      <Industries />
-      <Trust />
-      <Results />
+      <ClientsTypes />
       <Partners />
       <Contact />
     </>

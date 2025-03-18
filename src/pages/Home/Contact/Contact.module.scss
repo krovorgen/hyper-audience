@@ -1,0 +1,120 @@
+@import "../../../scss/helpers/mixins";
+@import "../../../scss/helpers/variables";
+
+.root {
+  margin-bottom: 120px;
+
+  @include media($sm) {
+    margin-bottom: 56px;
+  }
+}
+
+.title {
+  margin-right: auto;
+  margin-bottom: 48px;
+  margin-left: auto;
+  max-width: 633px;
+  font-family: "Anderson Grotesk", sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 130%;
+  text-align: center;
+  color: var(--dark, #2c2c2c);
+
+  @include media($sm) {
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+
+  mark {
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(140deg, #1189c4 24.25%, rgba(16, 206, 102, 0.86) 91.18%);
+    background-clip: text;
+  }
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+  gap: 56px;
+
+  @include media($lg) {
+    gap: 16px;
+  }
+
+  @include media($sm) {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 24px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--Accent-blue-2, #1189c4);
+  background-color: var(--block-bg, #f4f6fb);
+
+  @include media($sm) {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 14px;
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+}
+
+.form {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 528px;
+
+  @include media($sm) {
+    margin-bottom: 32px;
+  }
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+  gap: 24px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.flags {
+  width: 100%;
+
+  > button {
+    min-height: 69px;
+    border: 1px solid var(--gray, #959595);
+    border-radius: 36px;
+
+    &::after {
+      position: relative;
+      left: -12px;
+    }
+  }
+}

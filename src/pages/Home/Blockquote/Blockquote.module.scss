@@ -2,40 +2,30 @@
 @import "../../../scss/helpers/mixins";
 
 .root {
-  margin-bottom: 120px;
-  padding-top: 88px;
-  padding-bottom: 88px;
-  border-radius: 8px;
-  background-color: var(--Backgrounds-Card-2, #f3f7fc);
+  margin-bottom: 104px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  background-color: var(--Block-Bg, #f4f6fb);
 
   @include media($sm) {
-    margin-bottom: 72px;
+    margin-bottom: 56px;
     padding-top: 32px;
     padding-bottom: 32px;
   }
 }
 
 .text {
-  margin: 0 auto;
-  padding-left: 96px;
-  max-width: 898px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-size: var(--Text-sizes-H2, 32px);
-  line-height: 130%;
-  letter-spacing: -0.96px;
-  color: #53575e;
-  background-image: url("../../../assets/images/pages/Home/Blockquote/blockquote.svg");
-  background-position: top left;
-  background-repeat: no-repeat;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 934px;
+  font-family: "Anderson Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 140%;
+  text-align: center;
+  color: var(--gray2, #6b6b6b);
 
   @include media($sm) {
-    padding-left: 0;
-    font-size: 20px;
-    background-image: none;
-  }
-
-  mark {
-    color: var(--Text_colors-Primary, #222325);
+    font-size: 18px;
   }
 }

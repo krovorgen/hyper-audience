@@ -2,7 +2,7 @@
 @import "../../scss/helpers/mixins";
 
 .header {
-  padding-top: 24px;
+  padding-top: 12px;
 
   @include media($md) {
     padding-top: 12px;
@@ -61,17 +61,9 @@
 
 .link {
   font-weight: 400;
-  font-size: var(--Text-sizes-Body, 14px);
+  font-size: var(--Text-sizes-Body, 16px);
   line-height: 135%;
-  color: var(--Text_colors-Secondary, #53575e);
-
-  &:hover {
-    color: var(--Text_colors-Third, #a9abaf);
-  }
-
-  &Active {
-    color: var(--Text_colors-Third, #a9abaf);
-  }
+  color: #6b6b6b;
 }
 
 .burger {
@@ -86,5 +78,11 @@
 
   @include media($md) {
     display: block;
+  }
+}
+
+.contact {
+  @include media($lg) {
+    display: none;
   }
 }

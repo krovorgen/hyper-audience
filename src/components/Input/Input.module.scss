@@ -2,26 +2,19 @@
 @import "../../scss/helpers/variables";
 
 .input {
-  padding: 0 20px;
+  padding: 0 28px;
   width: 100%;
-  min-height: 48px;
-  border: 1px solid var(--Stroke_colors-card, #d1def2);
-  border-radius: 6px;
+  min-height: 69px;
+  border: 1px solid var(--Stroke_colors-card, #959595);
+  border-radius: 36px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 140%;
   color: var(--Text_colors-Secondary, #53575e);
   background-color: transparent;
 
-  &:hover {
-    border-color: var(--Stroke_colors-button_secondary, #0032af);
-  }
-
-  &:active,
-  &:focus {
-    border: 1px solid var(--Stroke_colors-button_secondary, #0032af);
-    box-shadow: 0 0 0 3px #d1def2;
-    background-color: #fff;
+  @include media($sm) {
+    font-size: 14px;
   }
 
   &::placeholder {

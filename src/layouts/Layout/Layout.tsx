@@ -4,8 +4,6 @@ import { Header } from '../../components/Header/Header.tsx';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { Footer } from '../../components/Footer/Footer.tsx';
 import styles from './Layout.module.scss';
-import { RoutePaths } from '../../constants';
-import cn from 'classnames';
 import { ScrollToTop } from '../../components/ScrollToTop/ScrollToTop.tsx';
 
 type Props = {};
@@ -13,7 +11,6 @@ type Props = {};
 export const Layout: FC<Props> = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const isAboutPage = location.pathname === RoutePaths.ABOUT;
 
   const lastHash = useRef('');
 
@@ -32,7 +29,7 @@ export const Layout: FC<Props> = () => {
   }, [location, navigate]);
 
   return (
-    <div className={cn(styles.root, { [styles.ellipse]: isAboutPage })}>
+    <div className={styles.root}>
       <Header />
       <ScrollToTop />
       <main>
