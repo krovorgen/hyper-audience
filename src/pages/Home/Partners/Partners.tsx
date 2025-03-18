@@ -8,7 +8,7 @@ type Props = {};
 
 export const Partners: FC<Props> = () => {
   return (
-    <section className={styles.root}>
+    <section className={styles.root} id="partners">
       <div className="container">
         <h2 className={styles.title}>Partners</h2>
         <div className={styles.img}>

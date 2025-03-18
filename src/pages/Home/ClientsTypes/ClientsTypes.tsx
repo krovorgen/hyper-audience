@@ -11,7 +11,7 @@ export const ClientsTypes: FC<Props> = () => {
     <section className={styles.root}>
       <div className="container">
         <ul className={styles.items}>
-          <li className={styles.item}>
+          <li className={styles.item} id="sellers">
             <h2 className={styles.title}>For Sellers</h2>
             <p className={styles.text}>
               Hyper DSP platform connects with the world&rsquo;s largest advertisers/agencies, it&nbsp;gets high quality
@@ -23,7 +23,7 @@ export const ClientsTypes: FC<Props> = () => {
               Request a demo for sellers <ArrowRight />
             </a>
           </li>
-          <li className={styles.item}>
+          <li className={styles.item} id="buyers">
             <h2 className={styles.title}>For Buyers</h2>
             <p className={styles.text}>
               Hyper Audience SSP providing access to&nbsp;more than 30&nbsp;billion daily ad&nbsp;requests across apps
