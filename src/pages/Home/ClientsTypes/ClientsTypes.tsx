@@ -3,6 +3,7 @@ import { FC } from 'react';
 import ArrowRight from '../../../assets/icons/arrow-right.svg?react';
 
 import styles from './ClientsTypes.module.scss';
+import { Link } from 'react-router-dom';
 
 type Props = {};
 
@@ -19,9 +20,9 @@ export const ClientsTypes: FC<Props> = () => {
               buying only relevant inventory and increases the income of&nbsp;publishers. Join&nbsp;us to&nbsp;maximize
               your income today!
             </p>
-            <a className={styles.link} href="/#contact">
+            <Link className={styles.link} to="/#contact">
               Request a demo for sellers <ArrowRight />
-            </a>
+            </Link>
           </li>
           <li className={styles.item} id="buyers">
             <h2 className={styles.title}>For Buyers</h2>
@@ -30,9 +31,9 @@ export const ClientsTypes: FC<Props> = () => {
               and web sites, to&nbsp;largest and most trusted premium supply partners. Real time automated and smart
               ad&nbsp;buying services maximize the performance of&nbsp;digital advertising for your brand.
             </p>
-            <a className={styles.link} href="/#contact">
+            <Link className={styles.link} to="/#contact">
               Request a demo for buyers <ArrowRight />
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

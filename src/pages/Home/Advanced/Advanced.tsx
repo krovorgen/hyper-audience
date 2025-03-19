@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import styles from './Advanced.module.scss';
 import { Button } from '../../../components/Button/Button.tsx';
+import { Link } from 'react-router-dom';
 
 type Props = {};
 
@@ -30,9 +31,11 @@ export const Advanced: FC<Props> = () => {
               <mark>Own DMP</mark> has various audience segments used in&nbsp;advertising placements
             </li>
           </ul>
-          <Button className={styles.btn} Component="a" href="#contact" variant="secondary" size="md">
-            Contact Us
-          </Button>
+          <Link className={styles.btn} to="/#contact">
+            <Button Component="span" variant="secondary" size="md">
+              Contact Us
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

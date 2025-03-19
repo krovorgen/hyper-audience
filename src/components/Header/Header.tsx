@@ -47,9 +47,11 @@ export const Header = (): JSX.Element => {
             ))}
           </ul>
         </nav>
-        <Button className={styles.contact} Component="a" href="/#contact" size="sm">
-          Contact Us
-        </Button>
+        <Link className={styles.contact} to="/#contact">
+          <Button Component="span" size="sm">
+            Contact Us
+          </Button>
+        </Link>
       </div>
     </header>
   );
