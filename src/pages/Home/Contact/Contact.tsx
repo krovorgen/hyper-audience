@@ -76,7 +76,7 @@ export const Contact: FC<Props> = () => {
             </div>
           </div>
           <Button type="submit" center variant="secondary">
-            Schedule a demo
+            Contact us
           </Button>
         </form>
       </div>
